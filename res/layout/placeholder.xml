@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/prompt">
+    
+    
+    <LinearLayout style="@style/TitleBar"
+                android:id="@+id/top">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText"/>
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton 
+            android:id="@+id/srch_btn"
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/title_search"
+            android:onClick="onClickSearch" />
+        <ImageButton 
+             android:id="@+id/add_btn"
+            style="@style/TitleBarAdd"
+            android:contentDescription="@string/description_add"
+            android:src="@drawable/actionbar_add"
+            android:onClick="onClickAdd" />
+   
+    </LinearLayout>	
+    <LinearLayout 
+	android:orientation="vertical" 
+	android:id="@+id/Search"  
+	android:padding="2.0sp" 
+	android:background="#ff355689"
+	android:visibility="gone" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" >
+        <RelativeLayout 
+		android:id="@+id/relativelayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+	
+            <AutoCompleteTextView 
+			android:id="@+id/query" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:hint="Type in an Estate:" 
+			android:layout_toLeftOf="@+id/btnGo" 
+			android:layout_alignParentLeft="true" 
+			android:hapticFeedbackEnabled="true" />
+            <ImageButton 
+			android:id="@+id/find" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:src="@drawable/btn_go" 
+			android:layout_alignParentRight="true" 
+			android:onClick="onClickfind"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    <ListView
+        android:id="@+id/lis"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" />
+
+    
+
+</LinearLayout>

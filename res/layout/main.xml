@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/db1_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/top">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_home"
+            android:visibility="gone"/>"
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:src="@drawable/title_about"
+            android:onClick="onClickAbout" />
+        
+</LinearLayout>
+<ScrollView android:id="@+id/scrollView1" 
+        android:padding="5.0sp" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="426dp"
+        android:orientation="vertical"
+        android:padding="6dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_weight="3.28"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/findme"
+                style="@style/HomeButton"
+                android:drawableTop="@drawable/title_find_me"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_findme" />
+
+            <Button
+                android:id="@+id/buyhouse"
+                style="@style/HomeButton"
+                android:layout_height="106dp"
+                android:drawableTop="@drawable/title_buy_house"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_buyhouse" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_weight="1.29"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/rental"
+                style="@style/HomeButton"
+                android:drawableTop="@drawable/title_rental_house"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_rental" />
+
+            <Button
+                android:id="@+id/motel"
+                style="@style/HomeButton"
+                android:drawableTop="@drawable/title_motel"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_motel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_weight="2.43"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/about"
+                style="@style/HomeButton"
+                android:drawableTop="@drawable/title_btn_about"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_about" />
+
+            <Button
+                android:id="@+id/exit"
+                style="@style/HomeButton"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/title_exit"
+                android:onClick="onClickFeature"
+                android:text="@string/btn_exit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

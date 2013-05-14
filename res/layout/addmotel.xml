@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/bg">
+  <LinearLayout style="@style/TitleBar"
+                android:id="@+id/top">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText"/>
+        
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/title_search"
+            android:onClick="onClickSearch"
+            android:visibility="gone" />
+        
+        <ProgressBar style="@style/TitleBarProgressIndicator"
+            android:id="@+id/send_progress" android:visibility="gone" />
+
+ 			<Button
+ 			    android:id="@+id/send"
+ 			    android:layout_width="wrap_content"
+ 			    android:layout_height="wrap_content"
+ 			    android:layout_alignParentLeft="true"
+ 			    android:layout_alignParentTop="true"
+ 			    android:layout_marginLeft="73dp"
+ 			    android:text="Submit"
+ 			    android:textSize="15sp"
+ 			    android:textStyle="bold"
+ 			    android:typeface="serif" />
+ 			
+
+        </LinearLayout>
+        <ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+        <!-- Parent layout starts -->
+        <LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical"
+			android:padding="10dip">
+			<!-- Title layout begins {.Jaymo} -->
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:paddingBottom="15px">
+				
+            <LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:paddingBottom="15px">
+			    <TextView android:id="@+id/lbl_date" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:textStyle="bold"
+					android:textColor="@drawable/title_color" />
+			    </LinearLayout>
+			    
+				<TextView android:id="@+id/lbl_title" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:textColor="@drawable/title_color"
+					android:textStyle="bold" android:text="Motel Name:" />
+
+				<EditText android:id="@+id/motel_title"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:capitalize="words" android:autoText="true" />
+
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:paddingBottom="15px">
+			    
+				<TextView android:id="@+id/price_title" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:textColor="@drawable/title_color"
+					android:textStyle="bold" android:text="Motel Price:" />
+
+				<EditText android:id="@+id/price"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:capitalize="words" android:autoText="true" android:numeric="integer" />
+
+			</LinearLayout>
+			
+			<!-- Location layout starts. -->
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:paddingBottom="15px">
+
+				<TextView android:id="@+id/loc"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textStyle="bold" android:textColor="@drawable/title_color"
+					android:text="Current Location:" />
+
+				<!-- location name -->
+				<EditText android:id="@+id/motel_location"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:hint="@string/hint_location" android:capitalize="words"
+					android:autoText="true" />
+
+				<com.google.android.maps.MapView
+					android:id="@+id/mapview" android:layout_width="fill_parent"
+					android:layout_height="300dip" android:apiKey="@string/google_maps_api_key"
+					android:enabled="true" android:clickable="true" />
+
+				<TextView android:textStyle="bold" android:gravity="center_horizontal"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textColor="@drawable/title_color" android:id="@+id/latlon" />
+			</LinearLayout>
+			<!-- Location layout ends. -->
+			
+			<!-- Photo layout starts. -->
+
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:padding="15px" >
+                   <TextView android:id="@+id/upload_pic" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:textColor="@drawable/title_color"
+					android:textStyle="bold" android:text="Upload Picture" />
+			    <ImageButton
+			        android:id="@+id/btnPicture"
+			        style="@style/TitleBarAction"
+			        android:layout_width="73dp"
+			        android:layout_height="fill_parent"
+			        android:contentDescription="@string/description_about"
+			        android:src="@drawable/camera" />
+
+			    <ImageView
+			        android:id="@+id/sel_photo_prev"
+			        android:layout_width="2188dp"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.38"
+			        android:adjustViewBounds="true"
+			        android:scaleType="centerCrop" />
+			</LinearLayout>
+
+			<!-- Photo layout ends. -->
+       </LinearLayout>      
+    <!-- Parent layout ends. -->
+	</ScrollView>
+	</LinearLayout>

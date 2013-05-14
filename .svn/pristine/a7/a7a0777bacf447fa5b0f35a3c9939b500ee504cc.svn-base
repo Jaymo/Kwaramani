@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+	<string-array name="updateOptions">
+		<item>Highest Precision</item>
+		<item>Medium Precision</item>
+		<item>Lowest Precision</item>
+	</string-array>
+	<string-array name="updateIndex">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="locations">
+	    <item>Select Location</item>
+		<item>Nairobi</item>
+		<item>Mombasa</item>
+	</string-array> 
+	<string-array name="PriceLimit">
+	    <item>Select PriceLimit</item>
+		<item>1,000,000</item>
+		<item>2,000,000</item>
+		<item>3,000,000</item>
+		<item>4,000,000</item>
+		<item>5,000,000</item>
+		<item>6,000,000</item>
+		<item>7,000,000</item>
+		<item>8,000,000</item>
+	</string-array> 
+    <string-array name="PropertyType">
+	     <item>Select PropertyType</item>
+		<item>Flat</item>
+		<item>Bungalow</item>
+		<item>Penthouse</item>
+		<item>Mansion</item>
+	</string-array> 
+	<string-array name="BedRooms">
+	    <item>Select BedRooms</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+    </string-array> 
+</resources>

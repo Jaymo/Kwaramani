@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Ramali.android.app" 
+    android:versionCode="2" 
+    android:versionName="2.1" >
+    
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" /> 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+        <uses-sdk android:minSdkVersion="7" />
+        <application
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name" 
+        android:debuggable="false">
+        
+        <uses-library android:name="com.google.android.maps" />
+        <service android:name="RamaliService" />
+      
+        
+        <activity android:label="@string/app_name" android:name=".RamaliSplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+             <activity android:name=".RamaliHome" android:label="@string/ramani"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+        <activity android:name=".LocateMe" android:label="@string/findme"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+            <activity android:name=".Rental" android:label="@string/rental"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+            
+                <activity android:name=".BuyHouse" android:label="@string/buyhouse"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+             <activity android:name=".Motel" android:label="@string/motel"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".About" android:label="@string/about"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".Houses" android:label="@string/houses"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".RentalList" android:label="@string/rentallist"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".RamaliListHouse" android:label="@string/listresults"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".AddMotel" android:label="@string/addmotel"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			<activity android:name=".MotelList" android:label="@string/motellist"
+			android:theme="@style/Theme.D1">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+			</activity>
+			
+			<activity android:name=".RamaliComment" android:label="@string/RamaniComment"
+			android:theme="@style/Theme.D1">
+			
+			</activity>
+        <activity android:name=".RamaliPrefs" android:label="@string/RamaniPrefs" >
+            
+       </activity>
+    </application>
+
+</manifest>
